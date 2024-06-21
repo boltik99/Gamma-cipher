@@ -1,0 +1,50 @@
+﻿<Window x:Class="vijenera.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:vijenera"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="930" Width="1300">
+    <Grid Margin="0,0,-0.4,-0.2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="379*"/>
+        </Grid.ColumnDefinitions>
+        <Label FontSize="18" Content="Ключ"  Background="#FF99FF89" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="771,62,0,0" VerticalAlignment="Top" Width="137" Grid.Column="1" Height="33"/>
+        <TextBox FontSize="18" x:Name="textbox_ishod_text" HorizontalAlignment="Left" Height="153" Margin="353,102,0,0" TextWrapping="Wrap" Text="Напиши сюда что нибудь ..." VerticalAlignment="Top" Width="383" Background="#FFC2F4BA" Grid.Column="1"/>
+        <Label FontSize="18" Content="Текст для шифрования" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="353,61,0,0" VerticalAlignment="Top" Background="#FF99FF89" Width="383" Grid.Column="1"/>
+        <TextBox FontSize="18" x:Name="textbox_keys" HorizontalAlignment="Left" Height="79" Margin="771,102,0,0" TextWrapping="Wrap" Text="Напиши ключ..." VerticalAlignment="Top" Width="429" Background="#FFC2F4BA" Grid.Column="1"/>
+        <Button FontSize="18" x:Name="Shifr_button" Content="Шифровка"  FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="771,516,0,0" VerticalAlignment="Top" Width="180" Height="76" Click="Button_Click" Background="#FFC2F4BA" Grid.Column="1"/>
+        <Button FontSize="18" x:Name="Deshifr_button" Background="#FFC2F4BA" Content="Расшифровка"  FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="1013,516,0,0" VerticalAlignment="Top" Width="187" Height="76" Click="Deshifr_button_Click" Grid.Column="1"/>
+        <TextBox FontSize="18" x:Name="textbox_shifr_text" HorizontalAlignment="Left" Height="163" Margin="350,378,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="383" Background="#FFC2F4BA" Grid.Column="1"/>
+        <Label FontSize="18" Content="Шифрованный текст" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="350,339,0,0" VerticalAlignment="Top" Background="#FF99FF89" Width="383" Grid.Column="1"/>
+        <Label FontSize="18" Content="Выбрать язык"  Background="#FF99FF89" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="909,708,0,0" VerticalAlignment="Top" Width="144" Grid.Column="1" Height="32"/>
+        <Button FontSize="18" x:Name="Rus" Content="Рус" Background="#FFC2F4BA" HorizontalAlignment="Left" Margin="771,776,0,0" VerticalAlignment="Top" Width="209" Click="Rus_Click" RenderTransformOrigin="0.357,0.5" Height="52" Grid.Column="1"/>
+        <Button FontSize="18" x:Name="Eng" Content="Англ" HorizontalAlignment="Left" Margin="1013,776,0,0" VerticalAlignment="Top" Width="187" Click="Eng_Click" Background="#FFC2F4BA" Height="52" Grid.Column="1"/>
+        <Button FontSize="18" x:Name="clear" Background="#FFC2F4BA" FontFamily="Segoe UI Black" Content="Очистить" HorizontalAlignment="Left" Margin="771,617,0,0" VerticalAlignment="Top" Width="429" Click="Clear_Click" Height="80" Grid.Column="1"/>
+        <TextBox FontSize="18" x:Name="textbox_deshifr_text" HorizontalAlignment="Left" Height="184" Margin="354,626,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="379" Background="#FFC2F4BA" Grid.Column="1"/>
+        <Label FontSize="18" Content="Текст после расшифровки" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="353,587,0,0" VerticalAlignment="Top" Background="#FF99FF89" Grid.Column="1" Width="380"/>
+        <Label  Content="ШИФР ГАММИРОВАНИЯ"  Background="#FFC2F4BA" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="461,10,0,0" VerticalAlignment="Top" Width="272" Grid.Column="1" Height="36" FontSize="20"/>
+        <TextBox x:Name="textbox_ishod_2" HorizontalAlignment="Left" Height="154" Margin="10,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Background="#FFC2F4BA" Grid.ColumnSpan="2" FontSize="18"/>
+        <TextBox FontSize="18" x:Name="textbox_shifr_text_2" HorizontalAlignment="Left" Height="163" Margin="10,378,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Background="#FFC2F4BA" Grid.ColumnSpan="2"/>
+        <Label FontSize="18" Content="Двоичный код исходного текста" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Background="#FF99FF89" Width="356" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="0.227"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="0.496"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label FontSize="18" Content="Двоичный код шифрованного текста" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="10,339,0,0" VerticalAlignment="Top" Background="#FF99FF89" Width="357" Grid.ColumnSpan="2"/>
+        <TextBox FontSize="18" x:Name="textbox_deshifr_text_2" HorizontalAlignment="Left" Height="184" Margin="10,632,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="357" Background="#FFC2F4BA" Grid.ColumnSpan="2"/>
+        <Label FontSize="18" Content="Двоичный код после расшифровки" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="10,593,0,0" VerticalAlignment="Top" Background="#FF99FF89" Width="357" Grid.ColumnSpan="2"/>
+        <Button FontSize="18" Name="Genn_keys" Content="Генерировать ключ"  FontFamily="Segoe UI Black" Grid.Column="1" HorizontalAlignment="Left" Margin="975,62,0,0" VerticalAlignment="Top" Width="225" Background="#FFC2F4BA" Height="34" Click="Genn_keys_Click"/>
+        <TextBox FontSize="18" x:Name="textbox_keys_2" HorizontalAlignment="Left" Height="149" Margin="771,318,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="429" Background="#FFC2F4BA" Grid.Column="1"/>
+        <Label FontSize="18" Content="Ключ в двоичном коде"  Background="#FF99FF89" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="771,263,0,0" VerticalAlignment="Top" Width="239" Grid.Column="1" Height="35"/>
+        <Label FontSize="18" Name="one_zero" Content=""  Background="#FFC2F4BA" FontFamily="Segoe UI Black" HorizontalAlignment="Left" Margin="1066,263,0,0" VerticalAlignment="Top" Width="134" Grid.Column="1" Height="35"/>
+
+    </Grid>
+</Window>
